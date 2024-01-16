@@ -29,6 +29,17 @@ class Practice4Object
     // $result doit valoir ['a' => 1, 'b' => 2, 'c' => 3]
     public static function exercice3($a)
     {
+
+        foreach ($a as $key => $value) {
+            if (is_array($value)) {
+                // Si la valeur est un tableau, appliquer récursivement
+                $result[$key] = convertToAssociativeArray($value);
+            } else {
+                // Si la valeur n'est pas un tableau, utiliser la valeur telle quelle
+                $result[$key] = $value;
+            }
+        }
+
         dd($a);
         // $result1 = array();
 

@@ -64,8 +64,7 @@ class Practice3Condition
     // la condition doit retourner true
     public static function exercice7($a, $b)
     {
-        $condition = empty(array_diff($b, [$a]));
-        $condition = !$condition;
+        $condition = !empty(array_diff($b, [$a]));
 
         // non la tu test la différence entre le contenu de a et b c'est pas ce que demande
 
